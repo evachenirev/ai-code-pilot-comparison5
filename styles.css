@@ -1,0 +1,249 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+#content-container {
+    display: flex;
+    height: calc(100vh - 60px); /* 假設 header 高度為 60px */
+}
+
+#left-column {
+    width: 30%;
+    background-color: #f8f8f8;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+}
+
+#right-column {
+    width: 70%;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.card-tab {
+    padding: 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+    font-weight: bold; /* 新增：頁籤文字粗體 */
+}
+
+.card-tab:hover {
+    background-color: #e0e0e0;
+}
+
+.card-tab.active {
+    background-color: #d0d0d0;
+    font-weight: bold;
+}
+
+.card-content {
+    display: none;
+}
+
+.card-content.active {
+    display: block;
+}
+
+/* 新增：卡片內容文字樣式 */
+.card-content h2 {
+    font-weight: bold;
+}
+
+.card-content ul {
+    padding-left: 20px;
+}
+
+.card-content li {
+    margin-bottom: 5px;
+    font-weight: bold; /* 新增：列表項目文字粗體 */
+}
+
+.card-content img {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    #content-container {
+        flex-direction: column;
+    }
+    #left-column, #right-column {
+        width: 100%;
+    }
+}
+
+/* 新增：評論輸入框樣式 */
+.comment-section {
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+}
+
+.input-container {
+    margin-bottom: 1rem;
+}
+
+.userInput {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.submitBtn, .editBtn, .deleteBtn {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.editBtn {
+    background-color: #2196F3;
+}
+
+.deleteBtn {
+    background-color: #f44336;
+}
+
+.userComment {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.comment-actions {
+    margin-top: 0.5rem;
+}
+
+#userComment {
+    padding: 0.5rem;
+    background-color: #e6f7ff;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    transition: box-shadow 0.3s ease;
+    min-height: 50px; /* 確保即使內容很少，也有足夠的空間放置按鈕 */
+}
+
+#userComment:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#userComment strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.comment {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.reply {
+    background-color: #f0f0f0;
+    border-left: 3px solid #ddd;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.likeBtn, .replyBtn, .editBtn, .deleteBtn, .submitReplyBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.replyBtn { background-color: #2196F3; }
+.editBtn { background-color: #FFC107; }
+.deleteBtn { background-color: #f44336; }
+
+.replyInput {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+}
+
+.likeBtn.liked {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* 添加以下響應式設計樣式 */
+@media screen and (max-width: 768px) {
+    #content-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #left-column, #right-column {
+        width: 100%;
+        height: auto;
+        overflow-y: visible;
+    }
+
+    #left-column {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .card-tab {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+
+    .card-content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .comment, .reply {
+        margin: 10px 0;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    .userInput, .submitBtn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
