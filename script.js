@@ -9,17 +9,17 @@ const cardData = [
         content: `
 ## GitHub Copilot
 - 優點：
-  - 擅長即時代碼補全和生成代碼
-  - 特別適合經常重複的程式碼片段
-  - 具有強大的情境感知能力
-  - 基於當前的編碼上下文自動生成代碼片段
-  - 適合快速生產力提升
+  - 擅長即時代碼補全與生成
+  - 特別適合處理重複性程式碼片段
+  - 具備強大的情境感知能力
+  - 基於當前編碼上下文自動生成代碼片段
+  - 能顯著提升生產力
 - 缺點：
-  - 受限於 2021 年的知識庫
+  - 知識庫僅更新至 2021 年
   - 對於一些較新的框架和技術支持有限
-  - 在基礎設施佈建領域（如 IaC）支持有限
+  - 在基礎設施佈建領域，如 IaC（Infrastructure as Code）中，表現較弱
 
-![Copilot GIF](copilot.gif)
+<img src="copilot.gif" alt="Copilot GIF" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 20px auto;">
 
 ## Cursor
 - 優點：
@@ -30,19 +30,19 @@ const cardData = [
 - 缺點：
   - 在 token 消耗和 Bug 處理方面有些挑戰
 
-![Cursor GIF](cursor.gif)
+<img src="cursor.gif" alt="Cursor GIF" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 20px auto;">
 
 ## Claude Dev
 - 優點：
-  - 擅長處理自動化任務
+  - 利用鍊式思維逐步解決問題(思維鍊) ，擅長處理自動化任務
   - 支持生成單元測試、執行系統操作等
-  - 在處理複雜項目管理和遞歸搜索方面表現突出
+  - 在處理複雜項目管理和遞迴搜索方面表現突出
   - 能自主執行一系列任務，適合處理更複雜的應用場景
 - 缺點：
-  - 代碼補全功能可能不如 GitHub Copilot 和 Cursor 精細
-  - 在小型項目或單一文件的情境下，可能不如其他工具靈活
+  - 代碼補全功能相對不如 GitHub Copilot 和 Cursor 精細
+  - 特別是在小型項目或單一文件的情境下，靈活度稍顯不足
 
-<img src="claudeDev.gif" alt="Claude Dev 演示" style="max-width: 100%; height: auto;">
+<img src="claudeDev.gif" alt="Claude Dev 演示" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 20px auto;">
 `
     },
     {
@@ -177,7 +177,7 @@ function createContent(data) {
     gifImages.forEach(img => {
         img.style.width = '100%'; // 設置寬度為 100%
         img.style.maxWidth = '800px'; // 將最大寬度增加到 800px
-        img.style.height = 'auto'; // 保持高度自動調整，以維持比例
+        img.style.height = 'auto'; // 保持高度自動調整，以���持比例
         img.style.display = 'block';
         img.style.margin = '20px auto'; // 增加上下邊距
     });
