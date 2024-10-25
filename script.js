@@ -61,7 +61,7 @@ const cardData = [
 ## Claude Dev
 - 在大規模項目中，代碼質量表現優秀
 - 特別適合需要分析和遞迴解決問題的任務
-- 在代碼補全的精確度上，相對不及 GitHub Copilot
+- 在代碼補全的精確度上，相對不及 GitHub Copilot`
 
     },
     {
