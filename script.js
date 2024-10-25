@@ -49,8 +49,8 @@ const cardData = [
         title: '代碼質量',
         content: `
 ## GitHub Copilot
-- 生成的代碼質量一般較高
-- 在主流語言（如 Python、JavaScript 等）中表現良好
+- 生成的代碼質量相對穩定
+- 特別是在主流語言（如 Python、JavaScript）中表現出色
 - 對於較新的技術框架或特定領域，其生成的代碼可能不夠精確或過時
 
 ## Cursor
